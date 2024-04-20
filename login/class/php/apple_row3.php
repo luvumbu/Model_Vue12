@@ -1,0 +1,17 @@
+<?php 
+ array_push(
+    $apple->row,
+    'social_user_id',
+    'social_user_id_sha1',
+    'social_user_ip', 
+    'social_user_name_1',
+    'social_user_name_2', 
+    'social_user_name_3',
+    'social_user_name_4',
+    'social_img_1', 
+    'social_img_2',
+    'social_img_3',
+    'social_img_4', 
+    'social_user_reg_date'
+    );
+    ?>

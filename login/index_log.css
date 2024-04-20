@@ -1,0 +1,95 @@
+ 
+  input {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .flex_box_1 {
+    display: flex;
+    justify-content: start;
+    background-color: #89832c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+  }
+
+  .flex_box_2 {
+    display: flex;
+    justify-content: end;
+    background-color: #89832c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .flex_box_3 {
+    display: flex;
+    justify-content: center;
+    background-color: #89832c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .flex_box_4 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #89832c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .flex_box_1 div {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border: 1px solid #89832c;
+  }
+
+  .flex_box_2 div {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border: 1px solid #89832c;
+  }
+
+  .flex_box_3 div {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border: 1px solid #89832c;
+  }
+
+  .flex_box_4 div {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border: 1px solid #89832c;
+  }
+
+
+  .cursor_pointer {
+    margin: 15px;
+  }
+
+  .margin_top {
+    margin-top: 100px;
+  } 
+  .cursor_pointer:hover{
+    cursor: pointer;
+  }
+
+
+  input,textarea{
+  
+    margin-top:25px ;margin-bottom: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    border:1px solid rgba(0,0,0,0.1) ; 
+
+  }
+ 
+
+
+
+
+#liste_projet_admin_show{
+  display: none;
+}
