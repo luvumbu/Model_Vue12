@@ -706,10 +706,10 @@ ok.add("showCoords_x", x); // ajout de l'information pour lenvoi
 function showCoords2(event) {
 
 
+if(showCoords_name){
 
-  
 
-  const showCoords_id_name =document.getElementById("showCoords_id_name").innerText ; 
+      const showCoords_id_name =document.getElementById("showCoords_id_name").innerText ; 
   const ip_address =document.getElementById("ip_address").innerText ; 
 
  
@@ -726,18 +726,22 @@ const ok = new Information("../class/php/showCoords.php"); // création de la cl
 
 ok.add("showCoords_id_name", showCoords_id_name); // ajout d'une deuxieme information denvoi  
 ok.add("ip_address", ip_address); // ajout d'une deuxieme information denvoi  
+ok.add("showCoords_action", "0"); // ajout d'une deuxieme information denvoi  
 
-ok.add("showCoords_action", "1"); // ajout d'une deuxieme information denvoi  
+
+
+
 
 ok.add("showCoords_x", x); // ajout de l'information pour lenvoi    
  ok.add("showCoords_y", y); // ajout d'une deuxieme information denvoi  
  console.log(ok.info()); // demande l'information dans le tableau
  ok.push(); // envoie l'information au code pkp 
 
- 
+
+ showCoords_name = false ; 
 }
 
-
+}
 
 
 
