@@ -175,7 +175,7 @@ if (count($apple_iteration_1->list_row) > 0) {
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
 
-    <body>
+    <body id="body" onmouseover="showCoords(event)" onclick="showCoords2(event)">
 
 
       <?php
@@ -367,9 +367,10 @@ if (count($apple_iteration_1->list_row) > 0) {
         <div class="display_flex01">
 
           <div>
-            <img src="http://localhost/Model_Vue12/src/img/icons8-visible.gif" alt="" srcset="" style="width:50px">
+            <img src="../../src/img/icons8-visible.gif" alt="" srcset="" style="width:50px">
           </div>
-          <div>
+          <div class="color_vue">
+     
             <?php
 
 include("home_info_cookie_1.php")  ; 
@@ -378,8 +379,8 @@ include("home_info_cookie_1.php")  ;
             ?>
           </div>
 
-          <div>
-            TOTAL 
+          <div class="color_vue">
+         
 
             <?php 
 include("home_info_cookie_2.php") ; 
@@ -640,4 +641,8 @@ $apple->execution();
   .display_flex01 div {
     padding: 15px;
   }
+  .color_vue{
+    color:grey ; 
+  }
 </style>
+
