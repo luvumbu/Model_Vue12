@@ -133,25 +133,10 @@ function add_picture() {
 
 
  
-function showCoords(event) {
-  let x = event.clientX;
-  let y = event.clientY;
-  let text = "X coords: " + x + ", Y coords: " + y;
- 
-  console.log(text) ; 
-}
 
 
 
-function showCoords(event) {
-  let x = event.clientX;
-  let y = event.clientY;
-  let text = "X coords: " + x + ", Y coords: " + y;
- 
-  console.log(text) ; 
-}
-
-
-
+  
+  
 
  

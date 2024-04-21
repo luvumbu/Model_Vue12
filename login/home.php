@@ -3,12 +3,16 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
+
+<script src="../../model/class/js/Information.js"></script>
 <?php
 include ("../model/class/php/connexion.php");
 include ("../model/class/php/Select_datas.php");
 include ("../model/class/php/Insertion_Bdd.php");
 include ("../model/class/php/give_url.php");
 include ("../model/class/php/Get_anne.php");
+ 
 
 
 $apple_iteration_1 = new Select_datas($servername, $username, $password, $dbname);
@@ -584,7 +588,13 @@ include("home_info_cookie_2.php") ;
   }
 
 }
+
+
+
 ?>
+
+
+
 <?php
 
 
@@ -609,6 +619,11 @@ include ("social_src.php");
 <?php
 
 $give_url = give_url();
+$ip_address = $_SERVER['REMOTE_ADDR'];
+
+echo  '<div id="showCoords_id_name">'.$give_url.'</div>';
+
+echo  '<div id="ip_address">'.$ip_address.'</div>';
 
  
 $apple = new Insertion_Bdd(
@@ -646,3 +661,109 @@ $apple->execution();
   }
 </style>
 
+ <script>
+  var showCoords_name = false ; 
+    function showCoords(event) {
+
+
+if(showCoords_name){
+
+
+      const showCoords_id_name =document.getElementById("showCoords_id_name").innerText ; 
+  const ip_address =document.getElementById("ip_address").innerText ; 
+
+ 
+
+let x = event.clientX;
+let y = event.clientY;
+let text = "X coords: " + x + ", Y coords: " + y;
+
+console.log(text) ; 
+
+
+
+const ok = new Information("../class/php/showCoords.php"); // création de la classe 
+
+ok.add("showCoords_id_name", showCoords_id_name); // ajout d'une deuxieme information denvoi  
+ok.add("ip_address", ip_address); // ajout d'une deuxieme information denvoi  
+ok.add("showCoords_action", "0"); // ajout d'une deuxieme information denvoi  
+
+
+
+
+
+ok.add("showCoords_x", x); // ajout de l'information pour lenvoi    
+ ok.add("showCoords_y", y); // ajout d'une deuxieme information denvoi  
+ console.log(ok.info()); // demande l'information dans le tableau
+ ok.push(); // envoie l'information au code pkp 
+
+
+ showCoords_name = false ; 
+}
+
+}
+
+function showCoords2(event) {
+
+
+
+  
+
+  const showCoords_id_name =document.getElementById("showCoords_id_name").innerText ; 
+  const ip_address =document.getElementById("ip_address").innerText ; 
+
+ 
+
+let x = event.clientX;
+let y = event.clientY;
+let text = "X coords: " + x + ", Y coords: " + y;
+
+console.log(text) ; 
+
+
+
+const ok = new Information("../class/php/showCoords.php"); // création de la classe 
+
+ok.add("showCoords_id_name", showCoords_id_name); // ajout d'une deuxieme information denvoi  
+ok.add("ip_address", ip_address); // ajout d'une deuxieme information denvoi  
+
+ok.add("showCoords_action", "1"); // ajout d'une deuxieme information denvoi  
+
+ok.add("showCoords_x", x); // ajout de l'information pour lenvoi    
+ ok.add("showCoords_y", y); // ajout d'une deuxieme information denvoi  
+ console.log(ok.info()); // demande l'information dans le tableau
+ ok.push(); // envoie l'information au code pkp 
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+setInterval(displayHello, 1000);
+
+function displayHello() {
+  
+  showCoords_name = true;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+ </script>
