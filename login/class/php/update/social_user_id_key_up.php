@@ -1,14 +1,6 @@
 <?php  
 include("path_class.php") ;
 
-
-
- 
- 
-
-
-
- 
 $liste_projet_admin_name1 = $_POST["liste_projet_admin_name1"] ; 
 $liste_projet_admin_name3 = $_POST["liste_projet_admin_name3"] ; 
 
@@ -34,28 +26,6 @@ $apple = new Insertion_Bdd(
 //      $apple->set_sql('UPDATE `liste_projet_admin` SET `liste_projet_admin_name1_ascii` = "'.$liste_projet_admin_name1_ascii.'",`liste_projet_admin_name1` = "'.$liste_projet_admin_name1.'",                             `liste_projet_admin_name2` = "'.$liste_projet_admin_name2 .'" , `liste_projet_admin_name2_ascii` = "'.$liste_projet_admin_name2_ascii .'"    WHERE `liste_projet_admin_id_sha1` = "'.$liste_projet_admin_id_sha1.'"') ; 
        $apple->execution() ;
        
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
 
 
 ?>
