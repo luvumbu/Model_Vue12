@@ -48,7 +48,7 @@ echo json_encode([]);
 
 
 
- 
+ /*
 
 
  
@@ -100,7 +100,7 @@ imagejpeg($nouvelle_image,'uploads/' . $_SESSION["information_user_id_sha1"].'/'
 // Libération de la mémoire
 imagedestroy($image_originale);
 imagedestroy($nouvelle_image);
-
+*/
  
 
 ?>
