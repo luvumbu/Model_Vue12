@@ -21,8 +21,8 @@ $showCoords_y = $_POST["showCoords_y"] ;
 
   
 include("apple_set_msg_valudation.php") ; 
-$apple->set_sql("INSERT INTO showcoords (showCoords_id_name,showCoords_ip,showCoords_x,showCoords_y,showCoords_action)
-VALUES ('$showCoords_id_name','$ip_address','$showCoords_x','$showCoords_y','$showCoords_action')") ; 
+$apple->set_sql("INSERT INTO showcoords (showCoords_id_name,showCoords_ip,showCoords_x,showCoords_y)
+VALUES ('$showCoords_id_name','$ip_address','$showCoords_x','$showCoords_y')") ; 
 $apple->execution() ;
 
 
