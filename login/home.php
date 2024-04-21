@@ -771,3 +771,14 @@ function displayHello() {
 
 
  </script>
+
+
+<style>
+#showCoords_id_name{
+  display: none;
+}
+
+  #ip_address{
+    display: none;
+  }
+</style>
